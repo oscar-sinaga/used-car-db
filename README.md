@@ -175,7 +175,8 @@ WHERE
 ;
 ```
 `Output`:
-![](images/query_output/query_result_1.PNG)
+
+![query_result_1](images/query_output/query_result_1.PNG)
 
 ### 2. Menambahkan satu data bid produk baru
 ```sql
@@ -186,11 +187,11 @@ VALUES (1501,113, 7, '2022-03-04', 185500000, 'Sent');
 
 **from : **
 
-![](images/query_output/query_result_2_1.PNG)
+![query_result_2_1](images/query_output/query_result_2_1.PNG)
 
 **to :**
 
-![](images/query_output/query_result_2_2.PNG)
+![query_result_2_2](images/query_output/query_result_2_2.PNG)
 
 ### 3. Melihat semua mobil yg dijual 1 akun dari yg paling baru
 --  Contoh: Mobil yang dijual oleh akun “Xanana Melan”
@@ -213,7 +214,8 @@ WHERE
     seller_name='Xanana Melani';
 ```
 `Output`:
-![](images/query_output/query_result_3.PNG)
+
+![query_result_3](images/query_output/query_result_3.PNG)
 
 ### 4.Mencari mobil bekas yang termurah berdasarkan keyword
 --  Contoh: Berdasarkan keyword “Yaris” (2% bobot)
@@ -233,7 +235,8 @@ ORDER BY
     price ASC;
 ```
 `Output`:
-![](images/query_output/query_result_3.PNG)
+
+![query_result_4](images/query_output/query_result_4.PNG)
 
 ### 5. Mencari mobil bekas yang terdekat berdasarkan sebuah id kota, jarak terdekat dihitung berdasarkan latitude longitude
 --  Contoh: mencari mobil terdekat dengan id kota 3173 
@@ -269,7 +272,8 @@ ORDER BY
     distance ASC;
 ```
 `Output`:
-![](images/query_output/query_result_5.PNG)
+
+![query_result_5](images/query_output/query_result_5.PNG)
 
 ##  Analytical Query
 
@@ -314,7 +318,8 @@ ORDER BY
     count_bid DESC	;
 ```
 `Output`:
-![](images/query_output/query_result_6.PNG)
+
+![query_result_6](images/query_output/query_result_6.PNG)
 
 ### 2. Membandingkan harga mobil berdasarkan harga rata-rata per kota
 --  Contoh: Bid untuk model mobil: Toyota Yaris.
@@ -344,7 +349,8 @@ FROM
     product_join;
 ```
 `Output`:
-![](images/query_output/query_result_7.PNG)
+
+![query_result_7](images/query_output/query_result_7.PNG)
 
 ### 3. Dari penawaran suatu model mobil, cari perbandingan tanggal user melakukan bid dengan bid selanjutnya beserta harga tawar yang diberikan (4% bobot)
 --  Contoh: Bid untuk model mobil: Toyota Yaris.
@@ -375,7 +381,8 @@ ORDER BY
     buyer_id;
 ```
 `Output`:
-![](images/query_output/query_result_8.PNG)
+
+![query_result_8](images/query_output/query_result_8.PNG)
 
 ### 4. Membandingkan persentase perbedaan rata-rata harga mobil berdasarkan modelnya dan rata-rata harga bid yang ditawarkan oleh customer pada 6 bulan terakhir (4% bobot)
 - Difference adalah selisih antara rata-rata harga model mobil(avg_price) dengan rata-rata harga bid yang ditawarkan terhadap model tersebut(avg_bid_6month)
@@ -430,7 +437,8 @@ SELECT
         avg_bid_price USING (model);
 ```
 `Output`:
-![](images/query_output/query_result_9.PNG)
+
+![query_result_9](images/query_output/query_result_9.PNG)
 
 ### 5. Membuat window function rata-rata harga bid sebuah merk dan model mobil selama 6 bulan terakhir. (5% bobot)
 --   Contoh: Mobil Toyota Yaris selama 6 bulan terakhir
@@ -513,7 +521,8 @@ WHERE
     model = 'Daihatsu Xenia';
 ```
 `Output`:
-![](images/query_output/query_result_10.PNG)
+
+![query_result_10](images/query_output/query_result_10.PNG)
 
 ## DBMS used
 postgresql-16.1-1-windows-x64
