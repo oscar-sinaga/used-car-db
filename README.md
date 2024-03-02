@@ -99,6 +99,7 @@ CREATE TABLE bid
 -- For table product_detail
 -- The price must be > 0 
 -- Column brand, model, body_type, and transmission must be not null
+
 ALTER TABLE product_detail
 	ADD CONSTRAINT price_check
 		CHECK(
@@ -123,7 +124,8 @@ ALTER TABLE buyer
 	ALTER COLUMN buyer_contact SET NOT NULL;
 	
 -- For table product
--- product_detail_id and seller_id must be its foreign key and not null 
+-- product_detail_id and seller_id must be its foreign key and not null
+ 
 ALTER TABLE product 
 	ADD CONSTRAINT fk_product_detail
 		FOREIGN KEY (product_detail_id) 
@@ -139,6 +141,7 @@ ALTER TABLE product
 -- For table product
 -- Product_id must be its foreign key and not null 
 -- Column bid_price must be > 0
+
 ALTER TABLE bid 
 	ADD	CONSTRAINT fk_product_id
 		FOREIGN KEY (product_id)
