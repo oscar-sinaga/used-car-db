@@ -23,7 +23,7 @@ CREATE TABLE seller
 (
 	seller_id SERIAL PRIMARY KEY,
 	seller_name varchar(255) UNIQUE NOT NULL,
-	seller_contact varchar(255),
+	seller_contact varchar(255) UNIQUE,
 	city_id integer
 );
 
@@ -32,7 +32,7 @@ CREATE TABLE buyer
 (
 	buyer_id SERIAL PRIMARY KEY,
 	buyer_name varchar(255) UNIQUE NOT NULL,
-	buyer_contact varchar(255),
+	buyer_contact varchar(255) UNIQUE,
 	city_id integer
 );
 

@@ -35,7 +35,6 @@ Berikut ini `used-car-db` yang telah saya buat. Database ini saya buat untuk mem
 Berikut ini Syntax DDL untuk membangun database `used-car-db`
 ```sql
 -- Create table city 
--- Create table city 
 CREATE TABLE city
 (
 	city_id integer PRIMARY KEY,
@@ -60,7 +59,7 @@ CREATE TABLE seller
 (
 	seller_id SERIAL PRIMARY KEY,
 	seller_name varchar(255) UNIQUE NOT NULL,
-	seller_contact varchar(255),
+	seller_contact varchar(255) UNIQUE,
 	city_id integer
 );
 
@@ -69,7 +68,7 @@ CREATE TABLE buyer
 (
 	buyer_id SERIAL PRIMARY KEY,
 	buyer_name varchar(255) UNIQUE NOT NULL,
-	buyer_contact varchar(255),
+	buyer_contact varchar(255) UNIQUE,
 	city_id integer
 );
 
